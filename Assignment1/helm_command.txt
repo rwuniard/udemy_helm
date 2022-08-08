@@ -1,0 +1,30 @@
+helm install mytomcat bitnami/tomcat
+
+echo Password: $(kubectl get secret --namespace default mytomcat -o jsonpath="{.data.tomcat-password}" | base64 -d)
+Password: 5R7AWo2h24
+
+kubectl get pods
+NAME                        READY   STATUS    RESTARTS   AGE
+mytomcat-849bfc76c8-xszx9   1/1     Running   0          13m
+
+I created custom_values.yaml
+helm upgrade mytomcat bitnami/tomcat --values custom_values.yaml
+
+Then i followed the instruction on how to get the nodePort IP and port number below:
+export NODE_PORT=$(kubectl get --namespace default -o jsonpath="{.spec.ports[0].nodePort}" services mytomcat)
+export NODE_IP=$(kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}")
+echo "Tomcat URL:            http://$NODE_IP:$NODE_PORT"
+echo "Tomcat Management URL: http://$NODE_IP:$NODE_PORT/manager"
+
+
+echo Password: $(kubectl get secret --namespace default mytomcat -o jsonpath="{.data.tomcat-password}" | base64 -d)
+Output:
+Password: test1234
+
+kubectl get secrets
+Output:
+NAME                             TYPE                                  DATA   AGE
+default-token-xdzss              kubernetes.io/service-account-token   3      31m
+mytomcat                         Opaque                                1      19m
+sh.helm.release.v1.mytomcat.v1   helm.sh/release.v1                    1      19m
+sh.helm.release.v1.mytomcat.v2   helm.sh/release.v1                    1      3m13s

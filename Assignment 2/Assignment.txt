@@ -1,0 +1,12 @@
+1. install bitnami/apache with Generate name 
+2. Do the dry-run first
+3. Create templates
+4. Get Release Notes
+5. Release Records
+
+helm install bitnami/apache --generate-name --dry-run
+helm template bitnami/apache --generate-name
+helm install bitnami/apache --generate-name
+helm ls -> to get the name
+helm get notes apache-1659734425
+kubectl get secret
