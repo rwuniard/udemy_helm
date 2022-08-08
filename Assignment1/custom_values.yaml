@@ -1,0 +1,6 @@
+tomcatPassword: "test1234"
+service:
+  type: NodePort
+  nodePorts: 
+    http: 30007
+
