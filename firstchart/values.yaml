@@ -1,3 +1,7 @@
+my:
+  custom:
+    data:
+      test
 # Default values for firstchart.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.

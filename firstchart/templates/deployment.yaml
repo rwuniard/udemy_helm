@@ -1,6 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
   {{"Templating is" -}} , {{- "cool"}}
+  {{.Values.my.custom.data}}
+  {{.Chart.Name}}
+  {{.Chart.Version}}
+  {{.Chart.AppVersion}}
+  {{.Chart.Annotations}}
+  {{.Release.Name}}
+  {{.Release.Namespace}}
+  {{.Release.IsInstall}}
+  {{.Release.IsUpgrade}}
+  {{.Release.Service}}
+  {{.Template.Name}}
+  {{.Template.BasePath}}
+  {{.Values.my.custom.data | default "testdefault" | upper | quote}}
 metadata:
   name: {{ include "firstchart.fullname" . }}
   labels:
