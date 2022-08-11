@@ -1,5 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
+  {{- if .Values.my.flag }}
+  {{"the condition is met"}}
+  {{- end}}
+  {{.Values.my.flag}}
+  
   {{"Templating is" -}} , {{- "cool"}}
   {{.Values.my.custom.data}}
   {{.Chart.Name}}
