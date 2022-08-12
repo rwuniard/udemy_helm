@@ -89,3 +89,8 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+data:
+  myvalue: "Hello"
+  drink: "coffee"
+  food: "pizza"
