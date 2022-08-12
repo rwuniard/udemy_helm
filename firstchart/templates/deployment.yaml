@@ -1,5 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
+  {{ template "firstchart.mytemplate" .}}
+
   {{- if .Values.my.flag }}
   {{"the condition is met"}}
   {{- else }}

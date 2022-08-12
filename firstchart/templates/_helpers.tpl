@@ -1,3 +1,12 @@
+
+{{/*
+My custom template.
+*/}}
+{{- define "firstchart.mytemplate" -}}
+{{- default .Chart.Name .Values.data.myvalue}}
+{{- end }}
+
+
 {{/*
 Expand the name of the chart.
 */}}
