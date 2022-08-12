@@ -2,14 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
   {{- if .Values.my.flag }}
   {{"the condition is met"}}
-  {{- else}}
+  {{- else }}
   {{"condition is not met | nindent 2"}}
-  {{- end}}
+  {{- end }}
+
   {{.Values.my.flag}}
   
   {{- with .Values.my.values}}
   {{- toYaml . | nindent 2}}
-  {{- end}}
+  {{- end }}
+  
+  {{- range .Values.my.values}}
+    {{ . | upper | quote}}
+  {{- end }}
+
+ 
+
 
   {{"Templating is" -}} , {{- "cool"}}
   {{.Values.my.custom.data}}
