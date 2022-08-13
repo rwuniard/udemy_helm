@@ -27,4 +27,13 @@ dependencies:
   - name: mysql
     version: ^8.8.5
     repository: https://charts.bitnami.com/bitnami
-    condition: mysql.enable
+    tags:
+      - enable
+    import-values:
+      - child: primary.service
+        parent: mysqlService
+  - name: redis
+    version: ^17.0.0
+    repository: https://charts.bitnami.com/bitnami
+    tags:
+      - enable

@@ -83,3 +83,15 @@ affinity: {}
 
 mysql:
   enable: false
+  auth:
+    rootPassword: test1234
+  # primary:
+  #   service:
+  #     type: nodePort
+  #     nodePort: 30000
+
+redis:
+  enable: false
+
+tags:
+  enable: false
