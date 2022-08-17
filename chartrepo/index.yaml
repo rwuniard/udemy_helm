@@ -1,0 +1,42 @@
+apiVersion: v1
+entries:
+  assignment4:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-08-17T18:26:27.848274-04:00"
+    dependencies:
+    - name: tomcat
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - enable
+      version: ^10.0.0
+    description: A Helm chart for Kubernetes
+    digest: 89ed1965a16804412c61192e2f67fe84b9f8e02703d3210509aa11dfb0093229
+    name: assignment4
+    type: application
+    urls:
+    - assignment4-0.1.0.tgz
+    version: 0.1.0
+  firstchart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-08-17T18:26:27.848631-04:00"
+    description: A Helm chart for Kubernetes
+    digest: da38780a2fe850f5e9331d9c9512dcb8c434c529befd21c2aced4a0ea6ed4a2f
+    name: firstchart
+    type: application
+    urls:
+    - firstchart-0.1.0.tgz
+    version: 0.1.0
+  secondchart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-08-17T18:26:27.848936-04:00"
+    description: A Helm chart for Kubernetes
+    digest: a1a4fc5611ea545c0487cd3beae670394897de4cfbc185c3bfdf27f568fc948d
+    name: secondchart
+    type: application
+    urls:
+    - secondchart-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-08-17T18:26:27.845677-04:00"
