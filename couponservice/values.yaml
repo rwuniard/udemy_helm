@@ -41,7 +41,7 @@ service:
   type: NodePort
   port: 9091
   targetPort: 9091
-  NodePort: 32761
+  nodePort: 32761
 
 ingress:
   enabled: false
